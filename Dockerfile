@@ -34,7 +34,7 @@ RUN chown -R qrl:qrl /home/qrl
 ENV HOME=/home/qrl
 RUN echo -e \
     "mining_enabled: True" \ 
-    "mining_address: ''" \
+    "mining_address: 'Q01050022d9695e470d864f1fe86cfabe79d5b277c1734e8dcb5d2b8a319c4c78f9ca5de44b5e9a'" \
     "mining_thread_count: 0" >> /home/qrl/.qrl/config.yml
 WORKDIR $HOME
 
