@@ -32,6 +32,10 @@ RUN groupadd -g 999 qrl && \
 RUN mkdir /home/qrl
 RUN chown -R qrl:qrl /home/qrl
 ENV HOME=/home/qrl
+RUN echo -e \
+    "mining_enabled: True" \ 
+    "mining_address: ''" \
+    "mining_thread_count: 0" >> /home/qrl/.qrl/config.yml
 WORKDIR $HOME
 
 USER qrl
